@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i></i>
+        <div class="logo_name">Doomsday Museum</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+        <a href="#home">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">home</span>
+        </a>
+         <span class="tooltip">home</span>
+      </li>
+      <li>
+       <a href="#intro">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Intro</span>
+       </a>
+       <span class="tooltip">Intro</span>
+     </li>
+     <li>
+       <a href="museum.html">
+         <i class='bx bx-chat'></i>
+         <span class="links_name">Museum</span>
+       </a>
+       <span class="tooltip">Museum</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Donation</span>
+       </a>
+       <span class="tooltip">Donation</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">Contact</span>
+       </a>
+       <span class="tooltip">Contact</span>
+     </li>
+     </li>
+     <div>
+
+      
+     </div>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="wrapper">
+    <section class="home-section slide" id="home">
+        <img src="cloud.png" id="cloud">
+        <img src="cloud2.png" id="cloud2">
+        <img src="cloud3.png" id="cloud3">
+        <img src="grid.png" id="grid">
+        <img src="moon.png" id="moon">
+        <h2 id="head">인류멸망박물관</h2>
+        <img src="museum.png" id="museum">
+        <img src="under.png" id="under">
+        <img src="piller.png" id="piller">
+        <a href="#" class="btn2">explore</a>
+    </section>
+
+      <section class="slide home-section" id="intro">
+        <div class="mm">
+          <h2>Memento Mori</h2>
+        </div>
+
+        <div class="intro">
+          <div class="click">
+            <li>
+            
+            </li>
+
+            <li>
+            
+            </li>
+
+            <li>
+            
+            </li>
+          </div>
+         
+        <div class="text">
+          <h2>과거를 알아야 미래가 있다</h2>
+          <p> [인류멸망박물관]은 과거 구인류가 어떻게 멸망하였는지 그 원인이 되는 물건들을 모아둔 박물관이다.
+            구인류와 현인류의 가장 큰 차이점으로 시력을 꼽는다. 200m 떨어진 물체도 선명하게 볼 수 있는 신인류에 비해,
+            구인류는 고작 1m 앞에 있는 사물을 인지하지 못하는 경우가 많았다.
+          </p>
+        </div>
+      </div>
+
+        <img src="piller2.png" id="piller2">
+        <img src="pic.png" id="pic">
+        <img src="pic2.png" id="pic2">
+        <img src="pic3.png" id="pic3">
+        <img src="under.png" id="under">
+        <img src="robot.png" id="robot">
+      </section>
+  
+      <section class="slide">
+       <img src="earth.png" id="earth">
+     </section>
+  
+      <section class="slide home-section">
+        <h2>뀨3</h2>
+        <p>냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
+        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
+        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
+        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐</p>
+      </section>
+
+      <section class="slide home-section">
+        <h2>Inthrough</h2>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const pos = document.documentElement;
+    pos.addEventListener('mousemove' , e =>{
+      pos.style.setProperty('--y' , e.clientX + 'px');
+      pos.style.setProperty('--x' , e.clientY + 'px');
+    })
+  </script>
+
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  };
+  </script>
+
+  <script type="text/javascript">
+    let cont = document.querySelector('.container');
+    let cloud = document.getElementById('cloud');
+    let cloud2 = document.getElementById('cloud2');
+    let cloud3 = document.getElementById('cloud3');
+    let moon = document.getElementById('moon');
+    let museum = document.getElementById('museum');
+    let piller = document.getElementById('piller');
+
+    cont.onscroll = function(){
+      let X = cont.scrollTop
+
+      cloud.style.left = X/4 + 'px' ;
+      cloud2.style.left = X/3 + 'px' ;
+      cloud3.style.left = X/2 + 'px' ;
+      museum.style.top = X/5 + 'px' ;
+      moon.style.top = ( - X/5) + 'px' ;
+      piller.style.top =  X/10 + 'px' ;
+
+    }
+
+  </script>
+
+
+
+</body>
+</html>
