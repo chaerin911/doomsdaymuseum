@@ -32,7 +32,7 @@
        <span class="tooltip">Intro</span>
      </li>
      <li>
-       <a href="/Users/chaekkie/Library/Mobile Documents/com~apple~CloudDocs/SEOULTECH/22_ 2학기/웹인터페이스디자인2/과제전/home4/museum/museum.html">
+       <a href="museum/museum.html">
          <i class='bx bx-chat'></i>
          <span class="links_name">Museum</span>
        </a>
@@ -117,15 +117,53 @@
      </section>
   
       <section class="slide home-section">
-        <h2>뀨3</h2>
-        <p>냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
-        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
-        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐
-        냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐냥냐냐냠냥냐냐</p>
+        <div class="intro">
+          <div class="click">
+            <li>
+            
+            </li>
+
+            <li>
+            
+            </li>
+
+            <li>
+            
+            </li>
+          </div>
+         
+        <div class="text">
+          <h2>그리하여 우리들은</h2>
+          <p> 따라서 현 인류는 과거 구 인류의 실수를 반복하지 않기 위해 이렇게 [인류멸망박물관]을 세워 그 과거를 잊지 않고자 한다.
+          </p>
+        </div>
+      </div>
+
+
+        <img src="under.png" id="under">
       </section>
 
-      <section class="slide home-section">
-        <h2>Inthrough</h2>
+      <section class="home-section slide" style="background-color: red;">
+        <img src="arrow1.png" id="arrow1">
+        <img src="arrow2.png" id="arrow2">
+        <img src="arrow3.png" id="arrow3">
+        <h2 class="m112">
+            <span>I</span>
+            <span>n</span>
+            <span>t</span>
+            <span>h</span>
+            <span>r</span>
+            <span>o</span>
+            <span>u</span>
+            <span>g</span>
+            <span>h</span>
+        </h2>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+       
+        <button type="button" onclick="location.href='museum/museum.html'">
+          Go to Museum
+        </button>
+
       </section>
     </div>
   </div>
@@ -174,8 +212,10 @@
     let museum = document.getElementById('museum');
     let piller = document.getElementById('piller');
 
+
     cont.onscroll = function(){
       let X = cont.scrollTop
+
 
       cloud.style.left = X/4 + 'px' ;
       cloud2.style.left = X/3 + 'px' ;
@@ -187,6 +227,30 @@
     }
 
   </script>
+
+<script>
+  var textWrapper = document.querySelector('.m112');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.m112 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.m112 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
+
+</script>
 
 
 

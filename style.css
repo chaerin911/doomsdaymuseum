@@ -407,9 +407,7 @@
 }
 
 .slide:nth-child(3){
-  background-color: aqua;
   width: 60vw;
-
 }
 
 .slide:nth-child(3) img{
@@ -422,10 +420,29 @@
 }
 
 .slide:nth-child(4){
+  width: 40vw;
   background-color: black;
+
 }
 
+
+.slide:nth-child(4) .intro{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  border: #FFF 1px solid;
+  width: 500px;
+  z-index: 13;
+  transform: translate(100px,400px);
+  overflow-x:visible;
+}
+
+
+
+
 .slide:nth-child(5){
+  padding: 2%;
   background-color: rgb(226, 0, 0);
   width: 200vw;
 }
@@ -435,17 +452,37 @@
   font-style: italic;
   font-weight: 300;
   font-size: 400px;
+  display: inline-block;
+}
+
+.slide:nth-child(5) img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80%;
+  object-fit: cover;
+}
+
+.slide:nth-child(5) button{
+  position: absolute;
+  top: calc(100vh/2);
+  right: 5%;
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+}
+
+.slide:nth-child(5) button:hover{
+  background-color: white;
 }
 
 
-
-
-
-
-
-
 .wrapper{
-  background-color: black;
+  background-color: rgb(255, 0, 0);
   display: flex;
   width: calc(500vw);
   transform: rotate(90deg) translateY(-100vh);
