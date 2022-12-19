@@ -510,7 +510,7 @@ body{
 
 
   .pointer{
-    clip-path: circle(500px at var(--x) var(--y));
+    clip-path: circle(300px at var(--x) var(--y));
     pointer-events: auto;
   }
 
